@@ -13,6 +13,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
+
         msg = itemView.findViewById(R.id.text_view_message);
+
     }
 }

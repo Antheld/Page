@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButtonSendMsg = findViewById(R.id.button_message_send);
-        EditTextWriteMsg = findViewById(R.id.edit_text_message_write);
         RecyclerViewMsg = findViewById(R.id.recycler_view);
+        EditTextWriteMsg = findViewById(R.id.edit_text_message_write);
+
 
         RecyclerViewMsg.setLayoutManager(new LinearLayoutManager(this));
 
@@ -37,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String message = EditTextWriteMsg.getText().toString();
+
                 msgs.add(message);
-               // dataAdapter.notifyDataSetChanged();
+                dataAdapter.notifyDataSetChanged();
+
                 EditTextWriteMsg.setText("");
             }
         });

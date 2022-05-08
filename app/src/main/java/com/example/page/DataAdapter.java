@@ -15,6 +15,7 @@ public class DataAdapter extends RecyclerView.Adapter<ViewHolder>{
 
     LayoutInflater inflater;
 
+
     public DataAdapter(Context context, ArrayList<String> msgs) {
         this.msgs = msgs;
         this.inflater = LayoutInflater.from(context);
@@ -24,7 +25,8 @@ public class DataAdapter extends RecyclerView.Adapter<ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_message, parent, false);
-        return null;
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
     }
 
     @Override
