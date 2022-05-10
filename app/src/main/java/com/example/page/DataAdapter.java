@@ -12,13 +12,21 @@ import java.util.ArrayList;
 public class DataAdapter extends RecyclerView.Adapter<ViewHolder>{
 
     ArrayList <String> msgs;
+    //added
+    ArrayList <String> date;
 
     LayoutInflater inflater;
 
 
-    public DataAdapter(Context context, ArrayList<String> msgs) {
+    public DataAdapter(Context context, ArrayList<String> msgs, /*added*/ ArrayList<String> date) {
         this.msgs = msgs;
+        //added
+        this.date = date;
+
+
         this.inflater = LayoutInflater.from(context);
+
+
     }
 
     @NonNull
@@ -32,7 +40,14 @@ public class DataAdapter extends RecyclerView.Adapter<ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String messages = msgs.get(position);
+        //added String time = date.get(position);
+        //String time = time.get;
+
+
         holder.msg.setText(messages);
+        //added
+        holder.time.setText("clap clap stomp");
+
     }
 
     @Override
