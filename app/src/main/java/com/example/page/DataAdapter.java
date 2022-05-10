@@ -41,7 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter<ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String messages = msgs.get(position);
         //added String time = date.get(position);
-        //String time = time.get;
+        
 
 
         holder.msg.setText(messages);
